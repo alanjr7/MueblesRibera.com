@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>catalogo de Mesas</title>
+    <style>
+        * {
+           
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #3d1240;
+        }
+
+        nav {
+            display: flex;
+            margin: auto;
+            background-color: #460C68;
+            text-align: center;
+            align-items: center;
+            height: 40px;
+            margin-top: 15px;
+        }
+
+        a {
+            color: #bbae5d;
+            margin-left: 15px;
+            font-family: 'Museo Sans", Arial, Helvetica, sans-serif';
+            background-color: #460C68;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #CD5888;
+        }
+
+        nav button {
+            color: #bbae5d;
+            font-family: 'Museo Sans", Arial, Helvetica, sans-serif';
+            padding: 0.7em 1.7em;
+            font-size: 18px;
+            border-radius: 0.5em;
+            background: #CD5888;
+            border: 1px solid #e8e8e8;
+            transition: all .3s;
+
+        }
+
+        button:active {
+            color: #666;
+            box-shadow: inset 4px 4px 12px #c5c5c5,
+                inset -4px -4px 12px #ffffff;
+        }
+
+        .card {
+            height: 254px;
+            width: 190px;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+            border-radius: 1em;
+            box-shadow: 0 0 20px 8px #d0d0d0;
+            margin: auto;
+            margin-bottom: 25px;
+            margin-top: 15px;
+        }
+
+        /*Image*/
+        .card-image {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+            background-image: url('https://github.com/alanjr7/RIBERA/blob/main/mesas%20web/10ecdae967f6080b10c8ab9e152333e6.jpg?raw=true');
+
+        }
+
+        /*Image*/
+        .card-image2 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+            background-image: url('https://github.com/alanjr7/RIBERA/blob/main/mesas%20web/2b363dc7f4729f8f5f70abe03a6d4272.jpg?raw=true');
+
+        }
+
+         /*Image*/
+     .card-image3 {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      background-image: url('https://github.com/alanjr7/RIBERA/blob/main/mesas%20web/2eae6cdae382773bc6ca924f010640cd.jpg?raw=true');
+
+    }
+    /*Image*/
+    .card-image4 {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      background-image: url('https://github.com/alanjr7/RIBERA/blob/main/mesas%20web/2ffcd3ddbde0856d6edcd4866f36445e.jpg?raw=true');
+
+    }
+
+    /*Image*/
+    .card-image5 {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      background-image: url('https://github.com/alanjr7/RIBERA/blob/main/mesas%20web/36ebdce0b214c4ba62ee80f1118553f5.jpg?raw=true');
+
+    }
+
+    /*Image*/
+    .card-image6 {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      background-image: url('https://github.com/alanjr7/RIBERA/blob/main/mesas%20web/764cd9b9f46698a91ed672a2865bf3d5.jpg?raw=true');
+
+    }
+
+    /*Image*/
+    .card-image7 {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      background-image: url('https://github.com/alanjr7/RIBERA/blob/main/mesas%20web/8da20ae7db40e6f90d4af752a1148718.jpg?raw=true');
+
+    }
+
+    /*Image*/
+    .card-image8 {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      background-image: url('https://github.com/alanjr7/RIBERA/blob/main/mesas%20web/b27aa7d20cc692711c991d25e5ad7069.jpg?raw=true');
+
+    }
+
+    /*Image*/
+    .card-image9 {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      background-image: url('https://github.com/alanjr7/RIBERA/blob/main/mesas%20web/ff341d2329248dd40177e575f68da2c7.jpg?raw=true');
+
+    }
+    
+    .card-image10 {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      background-image: url('https://github.com/alanjr7/RIBERA/blob/main/mesas%20web/dc5f77c5b4166f6b9635577bdb86b1d8.jpg?raw=true');
+
+    }
+
+
+        /*Description */
+        .card-description {
+            display: flex;
+            position: absolute;
+            gap: 1em;
+            flex-direction: column;
+            background-color: #f5f5f5;
+            height: 70px;
+            bottom: 0;
+            border-radius: 1em 1em 0 0;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+            padding: 1rem;
+            overflow-y: scroll;
+        }
+
+        /*Text*/
+        .text-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            background-color: #f5f5f5;
+            overflow: auto;
+        }
+
+        .text-body {
+            font-size: 1em;
+            line-height: 150%;
+            background-color: #f5f5f5;
+        }
+
+
+        /* Hover states */
+
+        .card:hover .card-description {
+         z-index: 2;
+            transform: translateY(100%);
+        }
+
+
+
+        .nombre {
+            margin-top: 15px;
+            font-family: 'Museo Sans", Arial, Helvetica, sans-serif';
+            font-size: 15.95px;
+            line-height: 22.7857px;
+            text-align: center;
+            letter-spacing: normal;
+            color: #bbae5d;
+            margin-bottom: 1px;
+        }
+
+        .nombre h2 {
+            margin-top: 1px;
+            font-size: small;
+            font-family: 'Museo Sans", Arial, Helvetica, sans-serif';
+        }
+
+        .cta {
+            border: none;
+            background: #f5f5f5;
+        }
+
+        .cta span {
+            padding-bottom: 7px;
+            letter-spacing: 4px;
+            font-size: 14px;
+            padding-right: 15px;
+            background-color: #f5f5f5;
+            text-transform: uppercase;
+        }
+
+        .cta svg {
+            transform: translateX(-8px);
+            transition: all 0.3s ease;
+            background-color: #f5f5f5;
+        }
+
+        .cta:hover svg {
+            transform: translateX(0);
+        }
+
+        .cta:active svg {
+            transform: scale(0.9);
+        }
+
+        .hover-underline-animation {
+            position: relative;
+            color: black;
+            padding-bottom: 20px;
+        }
+
+        .hover-underline-animation:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #000000;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .cta:hover .hover-underline-animation:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+    
+        }
+        .cssbuttons-io-button {
+ background: #A370F0;
+ color: white;
+ font-family: inherit;
+ padding: 0.35em;
+ padding-left: 1.2em;
+ font-size: 17px;
+ font-weight: 500;
+ border-radius: 0.9em;
+ border: none;
+ letter-spacing: 0.05em;
+ display: flex;
+ align-items: center;
+ margin: auto;
+ box-shadow: inset 0 0 1.6em -0.6em #714da6;
+ overflow: hidden;
+ position: relative;
+ height: 2.8em;
+ padding-right: 3.3em;
+ margin-bottom: 70px;
+}
+
+.cssbuttons-io-button .icon {
+ background: white;
+ margin-left: 1em;
+ position: absolute;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 2.2em;
+ width: 2.2em;
+ border-radius: 0.7em;
+ box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+ right: 0.3em;
+ transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+ width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+ width: 1.1em;
+ transition: transform 0.3s;
+ color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+ transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+ transform: scale(0.95);
+}
+section{  
+      display: flex;
+  flex-wrap: wrap;
+    }
+
+  .final{
+    background-color:#460C68;
+    margin: 15px;
+    color: #bbae5d;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+  }   
+  #loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 999;
+}
+
+#loading-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+  
+.wheel-and-hamster {
+  --dur: 1s;
+  position: relative;
+  width: 12em;
+  height: 12em;
+  font-size: 14px;
+}
+
+.wheel,
+.hamster,
+.hamster div,
+.spoke {
+  position: absolute;
+}
+
+.wheel,
+.spoke {
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wheel {
+  background: radial-gradient(100% 100% at center,hsla(0,0%,60%,0) 47.8%,hsl(0,0%,60%) 48%);
+  z-index: 2;
+}
+
+.hamster {
+  animation: hamster var(--dur) ease-in-out infinite;
+  top: 50%;
+  left: calc(50% - 3.5em);
+  width: 7em;
+  height: 3.75em;
+  transform: rotate(4deg) translate(-0.8em,1.85em);
+  transform-origin: 50% 0;
+  z-index: 1;
+}
+
+.hamster__head {
+  animation: hamsterHead var(--dur) ease-in-out infinite;
+  background: hsl(30,90%,55%);
+  border-radius: 70% 30% 0 100% / 40% 25% 25% 60%;
+  box-shadow: 0 -0.25em 0 hsl(30,90%,80%) inset,
+		0.75em -1.55em 0 hsl(30,90%,90%) inset;
+  top: 0;
+  left: -2em;
+  width: 2.75em;
+  height: 2.5em;
+  transform-origin: 100% 50%;
+}
+
+.hamster__ear {
+  animation: hamsterEar var(--dur) ease-in-out infinite;
+  background: hsl(0,90%,85%);
+  border-radius: 50%;
+  box-shadow: -0.25em 0 hsl(30,90%,55%) inset;
+  top: -0.25em;
+  right: -0.25em;
+  width: 0.75em;
+  height: 0.75em;
+  transform-origin: 50% 75%;
+}
+
+.hamster__eye {
+  animation: hamsterEye var(--dur) linear infinite;
+  background-color: hsl(0,0%,0%);
+  border-radius: 50%;
+  top: 0.375em;
+  left: 1.25em;
+  width: 0.5em;
+  height: 0.5em;
+}
+
+.hamster__nose {
+  background: hsl(0,90%,75%);
+  border-radius: 35% 65% 85% 15% / 70% 50% 50% 30%;
+  top: 0.75em;
+  left: 0;
+  width: 0.2em;
+  height: 0.25em;
+}
+
+.hamster__body {
+  animation: hamsterBody var(--dur) ease-in-out infinite;
+  background: hsl(30,90%,90%);
+  border-radius: 50% 30% 50% 30% / 15% 60% 40% 40%;
+  box-shadow: 0.1em 0.75em 0 hsl(30,90%,55%) inset,
+		0.15em -0.5em 0 hsl(30,90%,80%) inset;
+  top: 0.25em;
+  left: 2em;
+  width: 4.5em;
+  height: 3em;
+  transform-origin: 17% 50%;
+  transform-style: preserve-3d;
+}
+
+.hamster__limb--fr,
+.hamster__limb--fl {
+  clip-path: polygon(0 0,100% 0,70% 80%,60% 100%,0% 100%,40% 80%);
+  top: 2em;
+  left: 0.5em;
+  width: 1em;
+  height: 1.5em;
+  transform-origin: 50% 0;
+}
+
+.hamster__limb--fr {
+  animation: hamsterFRLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30,90%,80%) 80%,hsl(0,90%,75%) 80%);
+  transform: rotate(15deg) translateZ(-1px);
+}
+
+.hamster__limb--fl {
+  animation: hamsterFLLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30,90%,90%) 80%,hsl(0,90%,85%) 80%);
+  transform: rotate(15deg);
+}
+
+.hamster__limb--br,
+.hamster__limb--bl {
+  border-radius: 0.75em 0.75em 0 0;
+  clip-path: polygon(0 0,100% 0,100% 30%,70% 90%,70% 100%,30% 100%,40% 90%,0% 30%);
+  top: 1em;
+  left: 2.8em;
+  width: 1.5em;
+  height: 2.5em;
+  transform-origin: 50% 30%;
+}
+
+.hamster__limb--br {
+  animation: hamsterBRLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30,90%,80%) 90%,hsl(0,90%,75%) 90%);
+  transform: rotate(-25deg) translateZ(-1px);
+}
+
+.hamster__limb--bl {
+  animation: hamsterBLLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30,90%,90%) 90%,hsl(0,90%,85%) 90%);
+  transform: rotate(-25deg);
+}
+
+.hamster__tail {
+  animation: hamsterTail var(--dur) linear infinite;
+  background: hsl(0,90%,85%);
+  border-radius: 0.25em 50% 50% 0.25em;
+  box-shadow: 0 -0.2em 0 hsl(0,90%,75%) inset;
+  top: 1.5em;
+  right: -0.5em;
+  width: 1em;
+  height: 0.5em;
+  transform: rotate(30deg) translateZ(-1px);
+  transform-origin: 0.25em 0.25em;
+}
+
+.spoke {
+  animation: spoke var(--dur) linear infinite;
+  background: radial-gradient(100% 100% at center,hsl(0,0%,60%) 4.8%,hsla(0,0%,60%,0) 5%),
+		linear-gradient(hsla(0,0%,55%,0) 46.9%,hsl(0,0%,65%) 47% 52.9%,hsla(0,0%,65%,0) 53%) 50% 50% / 99% 99% no-repeat;
+}
+
+/* Animations */
+@keyframes hamster {
+  from, to {
+    transform: rotate(4deg) translate(-0.8em,1.85em);
+  }
+
+  50% {
+    transform: rotate(0) translate(-0.8em,1.85em);
+  }
+}
+
+@keyframes hamsterHead {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(0);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes hamsterEye {
+  from, 90%, to {
+    transform: scaleY(1);
+  }
+
+  95% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes hamsterEar {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(0);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(12deg);
+  }
+}
+
+@keyframes hamsterBody {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(0);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes hamsterFRLimb {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(50deg) translateZ(-1px);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(-30deg) translateZ(-1px);
+  }
+}
+
+@keyframes hamsterFLLimb {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(-30deg);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(50deg);
+  }
+}
+
+@keyframes hamsterBRLimb {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(-60deg) translateZ(-1px);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(20deg) translateZ(-1px);
+  }
+}
+
+@keyframes hamsterBLLimb {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(20deg);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(-60deg);
+  }
+}
+
+@keyframes hamsterTail {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(30deg) translateZ(-1px);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(10deg) translateZ(-1px);
+  }
+}
+
+@keyframes spoke {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-1turn);
+  }
+}
+    </style>
+</head>
+
+<body>
+    <div id="loading">
+        <div id="loading-content">
+            <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+                <div class="wheel"></div>
+                <div class="hamster">
+                    <div class="hamster__body">
+                        <div class="hamster__head">
+                            <div class="hamster__ear"></div>
+                            <div class="hamster__eye"></div>
+                            <div class="hamster__nose"></div>
+                        </div>
+                        <div class="hamster__limb hamster__limb--fr"></div>
+                        <div class="hamster__limb hamster__limb--fl"></div>
+                        <div class="hamster__limb hamster__limb--br"></div>
+                        <div class="hamster__limb hamster__limb--bl"></div>
+                        <div class="hamster__tail"></div>
+                    </div>
+                </div>
+                <div class="spoke"></div>
+            </div>
+        </div>
+      </div>
+      
+      <div id="main-content">
+        <!-- Tu contenido aquí -->
+    <div class="nombre">
+        <h1> Ribera muebles</h1>
+        <h2>ribera forniture company</h2>
+        <H3>CATALOGO de Mesas</H3>
+    </div>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="armarios.html">Armarios</a>
+        <a href="sillas.html">Sillas</a>
+        <a href="escritorios.html">Escritorios</a>
+        <a href="camas.html">Camas</a>
+
+    </nav>
+    <section>
+
+    
+        
+          
+
+        <div class="card">
+            <div class="card-image"></div>
+            <div class="card-description">
+                <p class="text-title"> mesa 1</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image2"></div>
+            <div class="card-description">
+                <p class="text-title"> mesa 2</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body"></p>
+            </div>
+        </div>
+ 
+        <div class="card">
+            <div class="card-image3"></div>
+            <div class="card-description">
+                <p class="text-title"> mesa 3</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image4"></div>
+            <div class="card-description">
+                <p class="text-title"> mesa 4</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image5"></div>
+            <div class="card-description">
+                <p class="text-title"> Mesa 5</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image6"></div>
+            <div class="card-description">
+                <p class="text-title">mesa 6</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image7"></div>
+            <div class="card-description">
+                <p class="text-title">mesa 7</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image8"></div>
+            <div class="card-description">
+                <p class="text-title">mesa 8</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image9"></div>
+            <div class="card-description">
+                <p class="text-title"> Mesa 9</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image10"></div>
+            <div class="card-description">
+                <p class="text-title">mesa 10</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body"></p>
+            </div>
+        </div>
+
+        <p class="final">Si tienes un modelo que no aparece en el catalogo envianoslo a nuestro whatsapp con gusto te lo fabricamos</p>
+    </section>
+
+    <button class="cssbuttons-io-button" onclick="sendWhatsAppMessage()"> GO mas modelos!!
+        <div class="icon">
+        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></svg>
+        </div>
+        </button>
+
+    </div>
+        <script>
+        function sendWhatsAppMessage() {
+        window.location.href = "https://api.whatsapp.com/send?phone=+59163603050&text=quiero%20ver%20más%20modelos%20de%20escritorios";
+        }
+
+        document.querySelectorAll("section button").forEach(function(button) {
+    button.id = "whatsapp-button";
+  });
+    const buttons = document.querySelectorAll('#whatsapp-button');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const text = encodeURI('quiero comprar un modelo de mesas');
+      const phoneNumber = '+59163603050'; // reemplazar con tu número de WhatsApp
+      window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${text}`);
+    });
+  });
+
+  window.addEventListener("load", function() {
+  document.getElementById("loading").style.display = "none";
+  document.getElementById("main-content").style.display = "block";
+});
+
+        </script>
+</body>
+
+</html>
